@@ -213,10 +213,26 @@ Total rows: 1000 of 8653
 
 
 Question 3: 
-
+What are the top 10 most expensive items being sold?
 SQL Queries:
 
+SELECT all_sessions.v2_product_name, analytics.unit_price
+From all_sessions
+INNER JOIN analytics on all_sessions.visit_id = analytics.visit_id
+ORDER BY unit_price desc
+LIMIT 10;
+
 Answer:
+"Nest® Learning Thermostat 3rd Gen-USA - White"	395
+"Nest® Learning Thermostat 3rd Gen-USA - White"	395
+"Nest® Learning Thermostat 3rd Gen-USA - White"	395
+"Nest® Learning Thermostat 3rd Gen-USA - White"	395
+"SPF-15 Slim & Slender Lip Balm"	316
+"SPF-15 Slim & Slender Lip Balm"	316
+"SPF-15 Slim & Slender Lip Balm"	316
+"SPF-15 Slim & Slender Lip Balm"	316
+"SPF-15 Slim & Slender Lip Balm"	316
+"SPF-15 Slim & Slender Lip Balm"	316
 
 
 
