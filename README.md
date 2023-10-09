@@ -1,11 +1,14 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-(fill in your description and goals here)
+The goal of this project is to analyze and transform data from a PostgreSQL server, in order to find insight and draw conclusion about products being sold through ecommerce.
 
 ## Process
-### (your step 1)
-### (your step 2)
+Step 1
+clean the data, for consistency and uniformity.
+
+Step 2
+Analyze the data, to find connection and draw some insight. 
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
