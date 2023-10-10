@@ -5,23 +5,32 @@ Missing variables within the all_sesions table. While there are numerous missing
 QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
+- I started by ensuring that every product had a unique sku that only appeared once. This was done with the following query.
+- This was followed by checking for Null/missing values within tables values that may not have been accounted for. 
+- I also made some adjustments in response to feedback I received, to ensure that some values N/A wasn't accounted for as a value.
+- My last step was to manually spot check certain tables for completeness, and proper formatting.
 
- Checking for duplicates within the products table 
- example
- SELECT sku, COUNT(*) AS count
-FROM products
-GROUP BY sku
-HAVING COUNT(*) > 1;
+```
+  SELECT sku, COUNT(*) AS count
+  FROM products
+  GROUP BY sku
+  HAVING COUNT(*) > 1;
+```
 
-cheking for Null/missing values within tables values 
-SELECT *
-FROM all_sessions
-WHERE visit_id IS NULL;
 
-SELECT *
-FROM all_sessions
-WHERE country = '(not set)'
+```
+  SELECT *
+  FROM all_sessions
+  WHERE visit_id IS NULL;
+```
 
-update all_sessions
-set country = NULL
-WHERE country = 'N/A'
+```
+  SELECT *
+  FROM all_sessions
+  WHERE country = '(not set)'
+```
+```
+  update all_sessions
+  set country = NULL
+  WHERE country = 'N/A'
+```

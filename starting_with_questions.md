@@ -6,25 +6,32 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 ### SQL Queries: 
 
+```
   SELECT *
   FROM all_sessions
   INNER JOIN sales_report ON all_sessions.product_sku = sales_report.product_sku;
+```
 
+```
   SELECT country, COUNT(DISTINCT full_visitor_id) as transactions
     FROM all_sessions
     GROUP BY country
     ORDER BY transactions DESC
   LIMIT 10;
-
+```
   SELECT *
    FROM all_sessions
   INNER JOIN sales_report ON all_sessions.product_sku = sales_report.product_sku;
+```
 
+```
   SELECT city, COUNT(DISTINCT full_visitor_id) as transactions
     FROM all_sessions
     GROUP BY city
     ORDER BY transactions DESC
   LIMIT 10;
+```
+
 
 Answer:
 | "Country"        | Highest Level of Transaction |
@@ -66,13 +73,14 @@ Answer:
 
 ### SQL Queries:
  
+ ```
   SELECT all_sessions.country, ROUND(AVG(sales_by_sku.total_ordered),2)
-    AS average_units_ordered
-    FROM sales_by_sku
-    INNER JOIN all_sessions ON sales_by_sku.product_sku = all_sessions.product_sku
-    GROUP BY all_sessions.country 
+  AS average_units_ordered
+  FROM sales_by_sku
+  INNER JOIN all_sessions ON sales_by_sku.product_sku = all_sessions.product_sku
+  GROUP BY all_sessions.country 
   ORDER BY average_units_ordered DESC;
-
+```
 
 
 
@@ -444,14 +452,17 @@ Answer:
 
 ### SQL Queries:
 
+```
   SELECT country, MAX(v2_product_category) AS most_common_product_type
   FROM all_sessions
   GROUP BY country;
+```
 
+```
   SELECT city, MAX(v2_product_category) AS most_common_product_type
   FROM all_sessions
   GROUP BY city;
-
+```
 
 
 ### Answer:
@@ -870,16 +881,20 @@ Answer:
 
 ### SQL Queries: 
 
-  SELECT country, v2_product_name, COUNT(*) AS item_count
-    FROM all_sessions
-    GROUP BY country, v2_product_name
+```
+  SELECT country, v2_product_name, COUNT(*) AS item_count    FROM all_sessions
+  GROUP BY country, v2_product_name
   order by item_count desc;
 
+```
+
+```
   SELECT city, v2_product_name, COUNT(*) AS item_count
-    FROM all_sessions
-    WHERE city NOT IN ('N/A')
-    GROUP BY city, v2_product_name
+  FROM all_sessions
+  WHERE city NOT IN ('N/A')
+  GROUP BY city, v2_product_name
   order by item_count desc;
+```
 
 
 ### Answer:
@@ -1426,6 +1441,7 @@ Answer:
 
 ### SQL Queries:
 
+```
   SELECT all_sessions.country, 
     SUM(analytics.units_sold * analytics.unit_price) AS revenue
     FROM all_sessions
@@ -1433,7 +1449,9 @@ Answer:
   GROUP BY all_sessions.country
   ORDER BY revenue DESC
   LIMIT 30;
+```
 
+```
   SELECT all_sessions.city, 
     SUM(analytics.units_sold * analytics.unit_price) AS revenue
     FROM all_sessions
@@ -1441,6 +1459,7 @@ Answer:
   GROUP BY all_sessions.city
   ORDER BY revenue DESC
   LIMIT 34;
+  ```
 
 
 ### Answer:
