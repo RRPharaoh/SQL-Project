@@ -21,3 +21,7 @@ WHERE visit_id IS NULL;
 SELECT *
 FROM all_sessions
 WHERE country = '(not set)'
+
+update all_sessions
+set country = NULL
+WHERE country = 'N/A'
