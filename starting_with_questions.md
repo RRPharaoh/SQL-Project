@@ -89,7 +89,7 @@ Answer:
 
 Answer:
 
-| Country                | Average # of visitors|
+| Country                | Average # of Orders|
 |------------------------|--------------------|
 | "Saudi Arabia"         | 96.29  |   |   |   |
 | "Kuwait"               | 85.75  |   |   |   |
