@@ -1,9 +1,11 @@
 #### What issues will you address by cleaning the data?
 
-First issue I will address are the names and structures of the table. Ensuring consistency as well as correct formatting.
-Followed by renaming and deleting unwanted/unneeded columns. Removing duplicate columns, and ensuring data completeness.
-Altering names of rows, changing types, changing formats and joining some tables.
-Look for outliers.
+- First issue I will address are the names and structures of the table.
+- Ensuring consistency as well as correct formatting.
+- Removing duplicate columns and ensuring data completeness.
+- removing columns that do not provide relevant data.
+- filling in empty portions of the tables, while determining what data should be utilized for said empty spaces.
+
 
 
 
@@ -47,25 +49,26 @@ Below, provide the SQL queries you used to clean your data.
 ```
 
 ```
-ALTER TABLE all_sessions
-ALTER COLUMN date TYPE DATE USING TO_DATE(CAST(date AS VARCHAR), 'YYYYMMDD');
+  ALTER TABLE all_sessions
+  ALTER COLUMN date TYPE DATE USING TO_DATE(CAST(date AS VARCHAR), 'YYYYMMDD');
 ```
 
 ```
-SELECT *
-FROM all_sessions
-WHERE currency_code IS NOT NULL AND currency_code <> 'USD'
+  SELECT *
+  FROM all_sessions
+  WHERE currency_code IS NOT NULL AND currency_code <> 'USD'
 ```
 
 ```
-UPDATE all_sessions
-SET currency_code = 'USD'
-WHERE currency_code IS NULL;
+  UPDATE all_sessions
+  SET currency_code = 'USD'
+  WHERE currency_code IS NULL;
 ```
 
 ```
-Check for duplicate
-Replacing values with N/A
-UPDATE all_sessions
-SET city = REPLACE(city, '(not set)', 'N/A')
-WHERE city = '(not set)';
+  Check for duplicate
+  Replacing values with N/A
+  UPDATE all_sessions
+  SET city = REPLACE(city, '(not set)', 'N/A')
+  WHERE city = '(not set)';
+```

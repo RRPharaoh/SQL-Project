@@ -5,7 +5,8 @@ The primary goal of this project is to analyze and transform data from a Postgre
 my secondary goal is to continue to improve on my SQL proficiency as well as improve my familiarity with the Posgresql process.
 
 ## Process
-Step 1
+
+### Step 1
 <em>clean the data, for consistency and uniformity.<em>
 My initial process begins with normalizing the data and making readable,
 I started by making adjustments to the columns. This included:
@@ -19,10 +20,10 @@ After completing the questions portion, it became clear what information was abs
 Some columns were left untouched even after the fact, simply because I felt that the columns were relevant to the overall data. One such example was the 'Time_on_site' column in the ‘all_sessions’ table. I could not figure out how to adjust that column to make it easier to understand, as I did not understand the scale that was used to measure time, i.e. seconds, minutes, etc.
 
 
- Step 2
+### Step 2
 <em>Analyze the data, to find connection and draw some insight.<em>
 I followed up by analyzing the data to gain some insight. 
-I started by establishing a Primary keys and foreign keys between the tables. once I could confirm that these columns were complete and reliable, I then attempted to draw connections between the tables as many of the questions required data from multiple tables. I then established key information that the individual tables could provide, and what they couldn’t. 
+I started by establishing a Primary keys and foreign keys between the tables. Once I could confirm that these columns were complete and reliable, I then attempted to draw connections between the tables as many of the questions required data from multiple tables. I then established key information that the individual tables could provide, and what they couldn’t. 
 
 ## Results
 The source of the data apears to be The Official Gooogle Merchandising Store. The data included products from the storefornt with unique skus, as well as an array of customer information. It also included path exploration as well as impression data, which I thought was interesting as well. Knowing how a cutomers ended up on the page for a particular item, can help us structure the site to more intuitive. I went directly to the Google merchandising site to see if I could draw anymore insight. Once I was able to parse through the data and figure out what was necessary from what wasn't, I was better able to answer the questions, while simultaniously coming up with new insights; like what sort of products were not popular/not selling, and what markets were underrepresented. 
