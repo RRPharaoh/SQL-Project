@@ -19,6 +19,7 @@ Answer the following questions and provide the SQL queries used to find the answ
     ORDER BY transactions DESC
   LIMIT 10;
 ```
+ ```
   SELECT *
    FROM all_sessions
   INNER JOIN sales_report ON all_sessions.product_sku = sales_report.product_sku;
@@ -34,6 +35,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 Answer:
+
 | "Country"        | Highest Level of Transaction |
 |------------------|------------------------------|
 | "United States"  | 8118                         |
@@ -68,12 +70,12 @@ Answer:
 
 
 
-**Question 2: What is the average number of products ordered from visitors in each city and country?**
+** Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
 ### SQL Queries:
- 
- ```
+
+```
   SELECT all_sessions.country, ROUND(AVG(sales_by_sku.total_ordered),2)
   AS average_units_ordered
   FROM sales_by_sku
@@ -86,6 +88,7 @@ Answer:
 
 
 Answer:
+
 | Country                | Average # of visitors|
 |------------------------|--------------------|
 | "Saudi Arabia"         | 96.29  |   |   |   |
