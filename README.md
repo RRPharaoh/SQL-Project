@@ -1,4 +1,4 @@
-# Final-Project-Transforming-and-Analyzing-Data-with-SQL
+# Transforming and Analyzing Data with SQL
 
 ## Project/Goals
 The primary goal of this project is to analyze and transform data from a PostgreSQL server, in order to find insight and draw conclusion about products being sold through ecommerce. 
